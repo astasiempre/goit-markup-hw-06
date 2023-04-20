@@ -643,3 +643,11 @@ body {
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--primary-white-color);
 }
+
+.modal-desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24/16);
+    letter-spacing: 0.02em;
+    color: var(--title-text-color)
+}
