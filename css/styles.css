@@ -7,7 +7,8 @@
   --footer-logo-part-color: #f4f4fd;
   --footer-social-link-color: #31d0aa;
   --background-modal-btn-color: #e7e9fc;
-  --transition-duration-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --span-imput-color: #8E8F99;
+  --transition-duration-func: 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -659,22 +660,87 @@ body {
   
 }
 
-.modal-form-field {
-  display: flex;
-  flex-direction: column;
-}
+
 .modal-form-input {
   width: 100%;
-  height: 100px;
-  /* border: 1px solid rgba(46, 47, 66, 0.4); */
-    border-radius: 10px;
-    padding: 34px;
+  height: 40px; 
+border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+    padding-left: 34px;
+    transition: border-color var(--transition-duration-func);
  }
 
-/* .modal-form-imput-desc {
+ .modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-text-color) ;
+ }
+
+
+.modal-form-imput-desc {
   display: block;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
 }
 
 .modal-form-field {
+  margin-bottom: 8px;
   
-}  */
+}  
+
+.modal-form-input-wrap {
+position: relative;
+display: block;
+}
+
+.modal-form-imput-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-duration-func);
+}
+
+.modal-form-input:focus + .modal-form-imput-icon {
+  fill: var(--accent-text-color);
+}
+
+.modal-form-massage {
+  resize: none;
+  width: 100%;
+  height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+      border-radius: 4px;
+      padding: 8px 16px;
+      transition: border-color var(--transition-duration-func) ;
+}
+
+.modal-form-massage:focus {
+  outline: none;
+border-color: var(--accent-text-color) ;
+}
+
+.modal-form-massage::placeholder {
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-form-check-desk::before {
+  content: "";
+  display: block;
+  width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.modal-form-check:checked + .modal-form-check-desk::before {
+  background-color: var(--accent-text-color) ;
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
