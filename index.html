@@ -406,15 +406,23 @@
           </ul>
         </div>
         <div class="footer-subscribe-wrap">
-          <label class="footer-subscribe-field">
-            <p class="footer-subscribe-field-desc">Subscribe</p>
-            <input class="footer-subscribe-field-input" type="email" name="user_email" placeholder="E-mail" />
-          </label>
-          <button  type="submit" class="footer-subscribe-btn">Subscribe
-            <svg class="footer-subscribe-icon" width="24" height="24">
+          <p class="footer-subscribe-field-desc">Subscribe</p>
+          <form class="footer-form">
+            <label class="footer-subscribe-field">
+              <input
+                class="footer-subscribe-field-input"
+                type="email"
+                name="user_email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-subscribe-btn"
+              >Subscribe
+              <svg class="footer-subscribe-icon" width="24" height="24">
                 <use href="./images/icon.svg#icon-subscribe-telegram"></use>
               </svg>
-          </button>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -472,9 +480,11 @@
             class="modal-form-check visually-hidden"
           />
           <label for="user-policy" class="modal-form-check-desk"
-            >I accept the terms and conditions of the&nbsp<a href="">Privacy Policy</a></label
+            >I accept the terms and conditions of the&nbsp;<a class="footer-modal-link" href=""
+              >Privacy Policy</a
+            ></label
           >
-         <button type="submit" class="modal-form-submit-btn">Send</button>
+          <button type="submit" class="modal-form-submit-btn">Send</button>
         </form>
       </div>
     </div>
